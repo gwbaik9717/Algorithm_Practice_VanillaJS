@@ -3,7 +3,7 @@ function solution(s) {
   let stack = [];
 
   for (let x of s) {
-    if (x === "+" || x === "-" || x === "*" || x === "/") {
+    if (isNaN(x)) {
       if (answer === null) {
         answer = Number(stack.pop());
       }

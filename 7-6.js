@@ -3,9 +3,7 @@ function solution(n, k) {
   let count = 1;
 
   // 최초 queue 생성
-  for (let i = 1; i <= n; i++) {
-    queue.push(i);
-  }
+  let queue = Array.from({ length: n }, (v, i) => i + 1); // [1,2,3,4,5,6,7,8] 배열 생성
 
   while (queue.length > 1) {
     if (count !== k) {
